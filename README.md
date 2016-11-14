@@ -25,7 +25,6 @@ Now with 14 unique mini games inspired by the original brick games :D
 Customizable:
 You can choose between 3 textures, 5 background colours and 5 button colours.
 
-You can find the source code here: https://github.com/TobiasBielefeld/Simple-Brick-Games
 Navigation in main menu, press:
  * left or right to change game
  * up to increase level
