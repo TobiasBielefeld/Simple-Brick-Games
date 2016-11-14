@@ -1,0 +1,7 @@
+keyStore=/path/to/keystore.jks
+
+keyStorePassword=password
+
+keyAlias=keyAlias
+
+keyAliasPassword=password

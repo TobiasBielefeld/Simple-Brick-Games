@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="de.tobiasbielefeld.brickgames"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/my_backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeMain">
+        <activity android:name=".ui.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppThemeOther"
+            android:name=".ui.Settings"
+            android:label="@string/Settings">
+        </activity>
+        <activity
+            android:theme="@style/AppThemeOther"
+            android:name=".ui.About"
+            android:label="@string/About">
+        </activity>
+
+    </application
+>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settingsCustomize">
+
+        <de.tobiasbielefeld.brickgames.dialogs.TexturesDialog
+            android:key="@string/prefKeyTextures"
+            android:title="@string/Settings_textures"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@null"
+            android:summary=""/>
+
+        <de.tobiasbielefeld.brickgames.dialogs.BackgroundDialog
+            android:key="@string/prefKeyBackground"
+            android:title="@string/Settings_backgroundcolour"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@null"
+            android:summary=""/>
+
+        <de.tobiasbielefeld.brickgames.dialogs.ButtonDialog
+            android:key="@string/prefKeyButtons"
+            android:title="@string/Settings_button"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@null"
+        android:summary=""/>
+
+        <de.tobiasbielefeld.brickgames.dialogs.VibrationStrengthDialog
+            android:key="@string/prefKeyVibrationStrength"
+            android:title="@string/settingsVibrationStrength"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:summary=""/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settingsOtherSettings">
+
+        <CheckBoxPreference
+            android:key="@string/prefKeyHideStatusBar"
+            android:defaultValue="false"
+            android:title="@string/settingsStatusBar" />
+
+        <CheckBoxPreference
+            android:key="@string/prefKeySound"
+            android:defaultValue="true"
+            android:title="@string/Settings_sound" />
+
+        <CheckBoxPreference
+            android:key="@string/prefKeyConfirmClosing"
+            android:defaultValue="true"
+            android:summary="@string/settingsBackPressDescription"
+            android:title="@string/settingsBackPress" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

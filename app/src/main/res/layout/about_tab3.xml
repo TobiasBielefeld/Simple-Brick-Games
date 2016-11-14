@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:gravity="start"
+android:padding="20dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 2.0.1"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made the app open source under GPLv3 license"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changed the about screen to add the license"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver. 2.0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="normal|bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rewrote and improved program code"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Improved about and settings screen"
+    android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Updated games E,F,G,L and N"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A lot of minor changes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.1.3"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Removed ads and internet permission"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.1.2"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Corrected sLives not shown on game m"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.1.1"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Improved sounds"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.1"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Added a new Game as J and moved the other games"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.0.1"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Corrected an internal error"
+    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Changed buttons in settings"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ver. 1.0"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textStyle="normal|bold" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Initial Release"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:layout_marginBottom="20dp"/>
+</LinearLayout>

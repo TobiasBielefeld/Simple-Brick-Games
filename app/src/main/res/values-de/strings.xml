@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Settings_backgroundcolour">Hintergrundfarbe</string>
+    <string name="Settings_button">Tastenfarbe</string>
+    <string name="Settings_textures">Texturen</string>
+    <string name="changed_to">geändert zu</string>
+    <string name="colour">Farbe</string>
+    <string name="colour_blue">Blau</string>
+    <string name="colour_gray">Grau</string>
+    <string name="colour_green">Grün</string>
+    <string name="colour_red">Rot</string>
+    <string name="colour_yellow">Gelb</string>
+    <string name="is_now">ist nun</string>
+    <string name="Settings_sound">Ton im Spiel erlauben</string>
+    <string name="About">Über das Spiel</string>
+    <string name="About_Text1">entwickelt von Tobias Bielefeld</string>
+    <string name="About_Text2">danke fürs Spielen :)</string>
+    <string name="About_Text3">Töne erstellt mithilfe:</string>
+    <string name="Settings">Einstellungen</string>
+    <string name="number">Nummer</string>
+    <string name="and">und</string>
+    <string name="About_changelog">Änderungen:</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="settingsBackPress">Beenden des Spiels bestätigen</string>
+    <string name="settingsBackPressDescription">Zum Beenden Zurück Taste zwei mal drücken</string>
+    <string name="settingsStatusBar">Benachrichtigungsleiste verbergen</string>
+    <string name="press_again">Zum Beenden erneut drücken</string>
+    <string name="settingsCustomize">Individualisieren</string>
+    <string name="settingsOtherSettings">Andere Einstellungen</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="settingsVibrationStrength">Vibrationsstärke</string>
+    <string name="off">Aus</string>
+    <string name="about_tab_1">Informationen</string>
+    <string name="about_tab_3">Änderungen</string>
+    <string name="about_tab_2">Lizenz</string>
+    <string name="about_license_top_text">Dieses Spiel wurde unter der GPL 3.0 Lizenz veröffentlicht:</string>
+    <string name="about_programm_code_text">SourceCode erhältlich auf:</string>
+</resources>
