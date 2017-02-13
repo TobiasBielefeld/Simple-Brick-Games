@@ -26,7 +26,8 @@
         </activity>
         <activity
             android:theme="@style/AppThemeOther"
-            android:name=".ui.About"
+            android:name=".ui.about.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/About">
         </activity>
 

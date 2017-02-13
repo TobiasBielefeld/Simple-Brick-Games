@@ -74,10 +74,10 @@ public class GameL extends Game {
             }
         }
 
-        if (mPlayer.y != FIELD_HEIGHT - 1) {
+        if (mPlayer.y != FIELD_HEIGHT - 1 && mPlayer.y!=0) {
             if ((mPlayer.y==1 || mDirection[(mPlayer.y-3)/2]==1) && mPlayer.x < FIELD_WIDTH - 1)
                 mPlayer.x++;
-            else if (mDirection[(mPlayer.y-3)/2]==0 && mPlayer.x >0)
+            else if ((mPlayer.y==1 || mDirection[(mPlayer.y-3)/2]==0) && mPlayer.x >0)
                 mPlayer.x--;
             else
                 explosion(mPlayer.x, mPlayer.y);

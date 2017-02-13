@@ -47,7 +47,6 @@
     <string name="About_Text3">Sounds created with:</string>
     <string name="About_Text4" translatable="false">www.pulseboy.com</string>
     <string name="About_Text5" translatable="false">www.bfxr.net</string>
-    <string name="About_changelog">Changelog:</string>
 
     <string name="pulseboy" translatable="false">PulseBoy</string>
     <string name="and">and</string>
@@ -62,8 +61,7 @@
     <string name="about_tab_1">Information</string>
     <string name="about_tab_2">License</string>
     <string name="about_tab_3">Changelog</string>
-    <string name="about_build_date" translatable="false">Build date</string>
-    <string name="about_license_top_text">This game is published under the GPL 3.0 license:</string>
+    <string name="about_build_date">Build date</string>
     <string name="about_programm_code_text">Source code available on:</string>
     <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Brick-Games">GitHub</a></string>
 

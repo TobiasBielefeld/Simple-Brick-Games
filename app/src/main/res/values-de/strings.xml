@@ -14,12 +14,12 @@
     <string name="Settings_sound">Ton im Spiel erlauben</string>
     <string name="About">Über das Spiel</string>
     <string name="About_Text1">entwickelt von Tobias Bielefeld</string>
-    <string name="About_Text2">danke fürs Spielen :)</string>
+    <string name="About_Text2">Danke fürs Spielen :)</string>
     <string name="About_Text3">Töne erstellt mithilfe:</string>
     <string name="Settings">Einstellungen</string>
     <string name="number">Nummer</string>
     <string name="and">und</string>
-    <string name="About_changelog">Änderungen:</string>
+    <string name="about_build_date">Kompiliert am</string>
     <string name="cancel">Abbrechen</string>
     <string name="settingsBackPress">Beenden des Spiels bestätigen</string>
     <string name="settingsBackPressDescription">Zum Beenden Zurück Taste zwei mal drücken</string>
@@ -33,6 +33,5 @@
     <string name="about_tab_1">Informationen</string>
     <string name="about_tab_3">Änderungen</string>
     <string name="about_tab_2">Lizenz</string>
-    <string name="about_license_top_text">Dieses Spiel wurde unter der GPL 3.0 Lizenz veröffentlicht:</string>
-    <string name="about_programm_code_text">SourceCode erhältlich auf:</string>
+    <string name="about_programm_code_text">Quellcode erhältlich auf:</string>
 </resources>

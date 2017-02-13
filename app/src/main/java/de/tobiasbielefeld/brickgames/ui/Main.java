@@ -49,6 +49,7 @@ import de.tobiasbielefeld.brickgames.R;
 import de.tobiasbielefeld.brickgames.classes.Game;
 import de.tobiasbielefeld.brickgames.surfaceViews.GameView1;
 import de.tobiasbielefeld.brickgames.surfaceViews.GameView2;
+import de.tobiasbielefeld.brickgames.ui.about.AboutActivity;
 
 import static de.tobiasbielefeld.brickgames.SharedData.*;
 import static de.tobiasbielefeld.brickgames.classes.Game.*;
@@ -184,7 +185,7 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
             if (Game.sCurrentGame != 0)                                                             //pause the game when opening, but not when the game menu is currently shown
                 startPause();
 
-            Intent intent = new Intent(getApplicationContext(), About.class);
+            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intent);
         } else if (item.getItemId() == R.id.item2) {
             if (Game.sCurrentGame != 0)
