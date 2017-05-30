@@ -35,10 +35,3 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
 }
-
-def props = new Properties()
-props.load(new FileInputStream(rootProject.file("release.properties")))
-android.signingConfigs.release.storeFile rootProject.file(props.keyStore)
-android.signingConfigs.release.storePassword props.keyStorePassword
-android.signingConfigs.release.keyAlias props.keyAlias
-android.signingConfigs.release.keyPassword props.keyAliasPassword
