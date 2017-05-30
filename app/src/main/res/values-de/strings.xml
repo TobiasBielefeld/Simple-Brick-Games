@@ -34,4 +34,12 @@
     <string name="about_tab_3">Änderungen</string>
     <string name="about_tab_2">Lizenz</string>
     <string name="about_programm_code_text">Quellcode erhältlich auf:</string>
+    <string name="ui_close">Close</string>
+    <string name="ui_reset">Reset</string>
+    <string name="ui_pause">Pause</string>
+    <string name="ui_highscore">HighScore:</string>
+    <string name="ui_score">Score:</string>
+    <string name="ui_level">Level:</string>
+    <string name="ui_speed">Speed:</string>
+    <string name="translations">Übersetzungen:</string>
 </resources>

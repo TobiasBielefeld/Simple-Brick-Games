@@ -3,10 +3,21 @@
 
     <string name="app_name" translatable="false">Simple Brick Games</string>
     <string name="app_version" translatable="false">Version</string>
-    <string name="app_build_date" translatable="false">Build date: 18 June 2016</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
     <string name="press_again">Press again to exit</string>
+    <string name="translations">Translations</string>
+
+    <!--UI-->
+    <string name="ui_close">Close</string>
+    <string name="ui_reset">Reset</string>
+    <string name="ui_pause">Pause</string>
+
+    <string name="ui_highscore">HighScore:</string>
+    <string name="ui_score">Score:</string>
+
+    <string name="ui_level">Level:</string>
+    <string name="ui_speed">Speed:</string>
 
     <!--Colours-->
     <string name="colour_blue">Blue</string>
@@ -55,8 +66,6 @@
     <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/"> under CC-BY-3.0 license </a></string>
     <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> under Apache Licence 2.0 </a></string>
     <string name="off">Off</string>
-
-
 
     <string name="about_tab_1">Information</string>
     <string name="about_tab_2">License</string>

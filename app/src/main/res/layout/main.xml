@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Close" />
+                    android:text="@string/ui_close" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Reset" />
+                    android:text="@string/ui_reset" />
             </LinearLayout>
 
             <LinearLayout
@@ -152,7 +152,7 @@
                     <FrameLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"></FrameLayout>
+                        android:layout_weight="1"/>
 
                     <ImageView
                         android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Pause" />
+                    android:text="@string/ui_pause" />
             </LinearLayout>
 
         </LinearLayout>
@@ -196,27 +196,27 @@
             android:layout_width="0dp"
             android:id="@+id/linearLayoutTexts"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp">
+            android:layout_marginStart="15dp">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_height="0dp"
                 android:layout_width="match_parent"
-                android:gravity="left|center"
+                android:gravity="start|center"
                 android:layout_weight="1">
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_height="0dp"
                     android:layout_width="match_parent"
-                    android:gravity="left|center"
+                    android:gravity="start|center"
                     android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="HighScore:"
+                        android:text="@string/ui_highscore"
                         />
 
                     <TextView
@@ -231,14 +231,14 @@
                     android:orientation="vertical"
                     android:layout_height="0dp"
                     android:layout_width="match_parent"
-                    android:gravity="left|center"
+                    android:gravity="start|center"
                     android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Score:"
+                        android:text="@string/ui_score"
                         />
 
                     <TextView
@@ -269,14 +269,14 @@
                         android:layout_height="0dp"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
-                        android:gravity="left|center">
+                        android:gravity="start|center">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Level: "
-                        />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:text="@string/ui_level"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -293,14 +293,14 @@
                         android:layout_height="0dp"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
-                        android:gravity="left|center">
+                        android:gravity="start|center">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Speed: "
-                            />
+                            android:layout_marginRight="2dp"
+                            android:text="@string/ui_speed"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -315,14 +315,14 @@
                         android:layout_height="0dp"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
-                        android:gravity="left|center"
+                        android:gravity="start|center"
                         android:visibility="visible">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:text="Pause"
+                            android:text="@string/ui_pause"
                             android:id="@+id/text_pause"
                             android:visibility="invisible"/>
 
