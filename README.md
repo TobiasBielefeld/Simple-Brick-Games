@@ -3,8 +3,7 @@
 ![platform](http://img.shields.io/badge/platform-Android-blue.svg)
 
 [<img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">](https://play.google.com/store/apps/details?id=de.tobiasbielefeld.brickgames)
-
-[![Brickgames on fdroid.org](https://camo.githubusercontent.com/7df0eafa4433fa4919a56f87c3d99cf81b68d01c/68747470733a2f2f662d64726f69642e6f72672f77696b692f696d616765732f632f63342f462d44726f69642d627574746f6e5f617661696c61626c652d6f6e2e706e67 "Download from fdroid.org")](https://f-droid.org/repository/browse/?fdfilter=simple+brick+game&fdid=de.tobiasbielefeld.brickgames)
+[<img alt="Get it on F-Droid" height="80" src="https://f-droid.org/badge/get-it-on.png"](https://f-droid.org/repository/browse/?fdid=de.tobiasbielefeld.brickgames)
 
 # Simple-Brick-Games
 You can find screenshots for phones [here](./screenshots)
