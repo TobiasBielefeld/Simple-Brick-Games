@@ -18,6 +18,7 @@
 
 package de.tobiasbielefeld.brickgames.ui;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -172,13 +173,26 @@ public class Settings extends AppCompatPreferenceActivity
             case "prefKeyHideStatusBar":
                 showOrHideStatusBar();
                 getIntent().putExtra(getString(R.string.prefKeyHideStatusBar), 1);
+                getIntent().putExtra(getString(R.string.prefKeyEnableKeyboardInput), 1);            //to resize the ui layout
                 break;
             case "prefKeyVibrationStrength":
                 setVibrationStrength();
                 break;
+            case "pref_key_language":
+                setLocale();
+                break;
+            case "prefKeyEnableKeyboardInput":
+                getIntent().putExtra(getString(R.string.prefKeyEnableKeyboardInput), 1);
+                break;
         }
 
         setResult(RESULT_OK, getIntent());
+    }
+
+    private void setLocale() {
+        Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     private void showOrHideStatusBar() {

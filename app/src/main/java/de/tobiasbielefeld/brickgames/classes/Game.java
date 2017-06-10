@@ -83,6 +83,7 @@ public abstract class Game {
         timerCounter2 = ++timerCounter2 % 200;
 
         if (sEvent == 0) {
+            //if (timerCounter2 % AUTO_FIRE_SPEED == 0) {
             if (sCurrentGame != 0 && timerCounter2 % AUTO_FIRE_SPEED == 0) {
                 for (int i = 0; i < 5; i++) {
                     if (mButtonPressed[i] != 0) {

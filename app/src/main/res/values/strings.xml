@@ -28,6 +28,7 @@
 
     <!--Settings-->
     <string name="Settings">Settings</string>
+    <string name="settingsInput">Input</string>
     <string name="Settings_textures">Textures</string>
     <string name="Settings_backgroundcolour">Background colour</string>
     <string name="Settings_button">Button colour</string>
@@ -49,7 +50,14 @@
     <string name="prefKeySound" translatable="false">prefKeySound</string>
     <string name="prefKeyConfirmClosing" translatable="false">prefKeyConfirmClosing</string>
     <string name="prefKeyHideStatusBar" translatable="false">prefKeyHideStatusBar</string>
-
+    <string name="prefKeyEnableKeyboardInput" translatable="false">prefKeyEnableKeyboardInput</string>
+    <string name="pref_key_language" translatable="false">pref_key_language</string>
+    <string name="prefKeyKeyboardInputMapping" translatable="false">prefKeyKeyboardInput</string>
+    <string name="settingsEnabledKeyboardInputTitle">Enable keyboard input</string>
+    <string name="settingsEnabledKeyboardInputText">Hide the software buttons and enable input via a physical keyboard</string>
+    <string name="settingsKeyboardInputMappingTitle">Key assignment</string>
+    <string name="settingsKeyboardInputMappingText">Select other keys for the input</string>
+    <string name="settings_change_language">Change language</string>
 
     <!--About-->
     <string name="About">About Game</string>
@@ -73,6 +81,16 @@
     <string name="about_build_date">Build date</string>
     <string name="about_programm_code_text">Source code available on:</string>
     <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Brick-Games">GitHub</a></string>
+
+
+    <!--KeyboardDialog-->
+    <string name="keyboardDialog_title1">Action buttons</string>
+    <string name="keyboardDialog_title2">Menu buttons</string>
+    <string name="keyboardDialogLeft">Left</string>
+    <string name="keyboardDialogRight">Right</string>
+    <string name="keyboardDialogUp">Up</string>
+    <string name="keyboardDialogDown">Down</string>
+    <string name="keyboardDialogAction">Action</string>
 
 
 </resources>

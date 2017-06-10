@@ -22,6 +22,7 @@ import android.content.SharedPreferences;
 import android.media.SoundPool;
 import android.os.Vibrator;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.widget.LinearLayout;
 import java.util.Random;
 
@@ -88,9 +89,14 @@ public class SharedData {
     public static int[] highScores = new int[NUMBER_OF_GAMES + 1];
     public static int[] mButtonPressed = new int[6];
 
+    public static int[] buttonKeyCodes = new int[8];
+
     public static void saveData(String key, int value) {
-        edit.putInt(key, value);
-        edit.apply();
+        edit.putInt(key, value).apply();
+    }
+
+    public static void saveData(String key, String value) {
+        edit.putString(key, value).apply();
     }
 
     public static Game getCurrentGame() {
@@ -113,6 +119,10 @@ public class SharedData {
 
     public static void vibrate(int duration) {
         vibration.vibrate(duration);
+    }
+
+    public static void logText(String text){
+        Log.e("Hey",text);
     }
 
 }

@@ -35,7 +35,36 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/settingsInput">
+
+        <CheckBoxPreference
+            android:key="@string/prefKeyEnableKeyboardInput"
+            android:defaultValue="false"
+            android:title="@string/settingsEnabledKeyboardInputTitle"
+            android:summary="@string/settingsEnabledKeyboardInputText"/>
+
+        <de.tobiasbielefeld.brickgames.dialogs.KeyboardDialog
+            android:key="@string/prefKeyKeyboardInputMapping"
+            android:title="@string/settingsKeyboardInputMappingTitle"
+            android:dependency="@string/prefKeyEnableKeyboardInput"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/confirm"
+            android:summary="@string/settingsKeyboardInputMappingText"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/settingsOtherSettings">
+
+        <ListPreference
+            android:defaultValue="default"
+            android:entries="@array/pref_language_titles"
+            android:entryValues="@array/pref_language_values"
+            android:key="@string/pref_key_language"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@null"
+            android:summary="%s"
+            android:title="@string/settings_change_language" />
 
         <CheckBoxPreference
             android:key="@string/prefKeyHideStatusBar"

@@ -27,6 +27,7 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 
 import de.tobiasbielefeld.brickgames.R;
+import de.tobiasbielefeld.brickgames.classes.CustomAppCompatActivity;
 
 import static de.tobiasbielefeld.brickgames.SharedData.savedData;
 
@@ -37,7 +38,7 @@ import static de.tobiasbielefeld.brickgames.SharedData.savedData;
  * This stuff is depreciated, but it works and looks very fine :)
  */
 @SuppressWarnings("deprecation")
-public class AboutActivity extends AppCompatActivity implements ActionBar.TabListener {
+public class AboutActivity extends CustomAppCompatActivity implements ActionBar.TabListener {
 
     private ViewPager viewPager;
     private ActionBar actionBar;
@@ -46,7 +47,6 @@ public class AboutActivity extends AppCompatActivity implements ActionBar.TabLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activty_about);
-        showOrHideStatusBar();
 
         actionBar = getSupportActionBar();
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -66,12 +66,6 @@ public class AboutActivity extends AppCompatActivity implements ActionBar.TabLis
         actionBar.addTab(tabSecond);
         actionBar.addTab(tabThird);
         actionBar.selectTab(tabFirst);
-    }
-
-    private void showOrHideStatusBar() {
-        if (savedData.getBoolean(getString(R.string.prefKeyHideStatusBar), false))
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

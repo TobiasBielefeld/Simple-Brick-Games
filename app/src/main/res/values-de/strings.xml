@@ -42,4 +42,5 @@
     <string name="ui_level">Level:</string>
     <string name="ui_speed">Speed:</string>
     <string name="translations">Übersetzungen:</string>
+    <string name="settings_change_language">Sprache ändern</string>
 </resources>

@@ -30,14 +30,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -46,11 +44,13 @@ import android.widget.Toast;
 import java.util.Locale;
 
 import de.tobiasbielefeld.brickgames.R;
+import de.tobiasbielefeld.brickgames.classes.CustomAppCompatActivity;
 import de.tobiasbielefeld.brickgames.classes.Game;
 import de.tobiasbielefeld.brickgames.surfaceViews.GameView1;
 import de.tobiasbielefeld.brickgames.surfaceViews.GameView2;
 import de.tobiasbielefeld.brickgames.ui.about.AboutActivity;
 
+import static android.view.View.GONE;
 import static de.tobiasbielefeld.brickgames.SharedData.*;
 import static de.tobiasbielefeld.brickgames.classes.Game.*;
 
@@ -58,7 +58,9 @@ import static de.tobiasbielefeld.brickgames.classes.Game.*;
  *  Main activity which loads everything, handles the button input and contains the main loop
  */
 
-public class Main extends AppCompatActivity implements Runnable, View.OnTouchListener{
+public class Main extends CustomAppCompatActivity implements Runnable, View.OnTouchListener{
+
+    final long BACK_PRESSED_TIME_DELTA = 2000;
 
     private long mBackPressedTime;
 
@@ -72,6 +74,12 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
     private long mLastFrameTime;
 
     private LinearLayout mLinearLayoutBackground;
+    LinearLayout l1 ;
+    LinearLayout linearLayoutMenuButtons ;
+    LinearLayout linearLayoutGameField;
+    LinearLayout linearLayoutTexts ;
+    LinearLayout linearLayoutGameExtra ;
+    LinearLayout linearLayoutButtons ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,11 +89,12 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
         createSoundPool();
 
         mLinearLayoutBackground = (LinearLayout) findViewById(R.id.linearLayoutBackground); //the whole display
-        LinearLayout l1 = (LinearLayout) findViewById(R.id.LinearLayout1);
-        LinearLayout linearLayoutMenuButtons = (LinearLayout) findViewById(R.id.linearLayoutMenuButtons);
-        LinearLayout linearLayoutGameField = (LinearLayout) findViewById(R.id.linearLayoutGameField);
-        LinearLayout linearLayoutTexts = (LinearLayout) findViewById(R.id.linearLayoutTexts);
-        LinearLayout linearLayoutGameExtra = (LinearLayout) findViewById(R.id.linearLayoutGameExtra);
+        l1 = (LinearLayout) findViewById(R.id.LinearLayout1);
+        linearLayoutMenuButtons = (LinearLayout) findViewById(R.id.linearLayoutMenuButtons);
+        linearLayoutGameField = (LinearLayout) findViewById(R.id.linearLayoutGameField);
+        linearLayoutTexts = (LinearLayout) findViewById(R.id.linearLayoutTexts);
+        linearLayoutGameExtra = (LinearLayout) findViewById(R.id.linearLayoutGameExtra);
+        linearLayoutButtons = (LinearLayout) findViewById(R.id.linearLayoutButtons);
         vibration = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -127,38 +136,48 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
         look = savedData.getInt(getString(R.string.prefKeyTextures), 2);
         menu.load();
 
-        /* set up the dimensions of the field */
-        metrics = getResources().getDisplayMetrics();
-        width = (int) ((metrics.heightPixels - 5.0) / (FIELD_HEIGHT * 2.0));
-
         Game.reset();
-
-        /* set up the layouts (the layouts will be rearranged to fit the calculated field dimensions)*/
-        params = new LinearLayout.LayoutParams(metrics.widthPixels, (FIELD_HEIGHT) * width + distanceHeight * 2);
-        params.setMargins(0, width, 0, 0);  //width is okay
-        l1.setLayoutParams(params);
-        linearLayoutMenuButtons.setLayoutParams(new LinearLayout.LayoutParams((metrics.widthPixels / 2 - ((FIELD_WIDTH * width) / 2)) - distanceWidth, LinearLayout.LayoutParams.MATCH_PARENT));
-        linearLayoutGameField.setLayoutParams(new LinearLayout.LayoutParams(FIELD_WIDTH * width + distanceWidth * 2, LinearLayout.LayoutParams.MATCH_PARENT));
-        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        params.setMargins(width, 0, 0, 0);
-        linearLayoutTexts.setLayoutParams(params);
-        linearLayoutGameExtra.setLayoutParams(new LinearLayout.LayoutParams(width * FIELD_WIDTH_2 + distanceWidth * 2, width * FIELD_HEIGHT_2 + distanceHeight * 2));
-        linearLayoutGameField.addView(gameView1);
-        linearLayoutGameExtra.addView(gameView2);
 
         for (int i=0;i<5;i++) {
             mButton[i].setOnTouchListener(this);
         }
 
+        //linearLayoutButtons.setOnTouchListener(this);
+
         setBackgroundColor();
         changeButtonColor();
-        showOrHideStatusBar();
+
+        linearLayoutGameField.addView(gameView1);
+        linearLayoutGameExtra.addView(gameView2);
+
+        /* set up the layouts (the layouts will be rearranged to fit the calculated field dimensions)*/
+        mLinearLayoutBackground.post(new Runnable() {
+            @Override
+            public void run() {
+                setUpDimensions();
+            }
+        });
+
+
+        buttonKeyCodes[0] = savedData.getInt("buttonUp",KeyEvent.KEYCODE_W);
+        buttonKeyCodes[1] = savedData.getInt("buttonDown",KeyEvent.KEYCODE_S);
+        buttonKeyCodes[2] = savedData.getInt("buttonLeft",KeyEvent.KEYCODE_A);
+        buttonKeyCodes[3] = savedData.getInt("buttonRight",KeyEvent.KEYCODE_R);
+        buttonKeyCodes[4] = savedData.getInt("buttonAction",KeyEvent.KEYCODE_L);
+        buttonKeyCodes[5] = savedData.getInt("buttonClose",KeyEvent.KEYCODE_X);
+        buttonKeyCodes[6] = savedData.getInt("buttonReset",KeyEvent.KEYCODE_R);
+        buttonKeyCodes[7] = savedData.getInt("buttonPause",KeyEvent.KEYCODE_P);
     }
 
     @Override
     public void onPause() {                                                                         //pause thread
         super.onPause();
         mIsRunning = false;
+
+        if (Game.sCurrentGame != 0) {                                                               //pause the game, but not when the game menu is currently shown
+            startPause();
+        }
+
         try {
             mThread.join();
         } catch (InterruptedException ignored) {}
@@ -182,15 +201,9 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.item1) {
-            if (Game.sCurrentGame != 0)                                                             //pause the game when opening, but not when the game menu is currently shown
-                startPause();
-
             Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intent);
         } else if (item.getItemId() == R.id.item2) {
-            if (Game.sCurrentGame != 0)
-                startPause();
-
             startActivityForResult(new Intent(getApplicationContext(), Settings.class), 0);
         }
 
@@ -207,13 +220,15 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
                 changeButtonColor();
 
             if (data.getIntExtra(getString(R.string.prefKeyHideStatusBar), 0) > 0)
-                showOrHideStatusBar();
+                showOrHideStatusBar(this);
+
+            if (data.getIntExtra(getString(R.string.prefKeyEnableKeyboardInput),0) > 0)
+                setUpDimensions();
         }
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent sEvent) {                                         //handle back mButton presses
-        long BACK_PRESSED_TIME_DELTA = 2000;
+    public boolean onKeyDown(int keyCode, KeyEvent event) {                                         //handle back mButton presses
 
         if (keyCode == KeyEvent.KEYCODE_BACK                                                        //if it was the back key and this feature is still activated in the Settings,
                 && savedData.getBoolean(getString(R.string.prefKeyConfirmClosing), true)
@@ -224,7 +239,76 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
             return true;                                                                            //don't exit the game
         }
 
-        return super.onKeyDown(keyCode, sEvent);                                                     //if the time delta is smaller than the max time, close game
+        if (savedData.getBoolean(getString(R.string.prefKeyEnableKeyboardInput),false)) {
+            int pressedButtonID = -1;
+
+            if (keyCode==buttonKeyCodes[5]){
+                if (savedData.getBoolean(getString(R.string.prefKeyConfirmClosing), true)
+                        && (System.currentTimeMillis() - mBackPressedTime > BACK_PRESSED_TIME_DELTA)) {      //and the delta to the last time pressed mButton is over the max time
+
+                    showToast(getString(R.string.press_again));                                             //show toast to press again
+                    mBackPressedTime = System.currentTimeMillis();                                           //and save the time as pressed don't exit the game
+                } else {
+                    buttonPressClose();
+                }
+                return true;
+            } else  if (keyCode==buttonKeyCodes[6]) {
+                buttonPressReset();
+                return true;
+            } else  if (keyCode==buttonKeyCodes[7]) {
+                buttonPressPause();
+                return true;
+            } else  if (keyCode==buttonKeyCodes[0]) {
+                pressedButtonID = 0;
+            } else  if (keyCode==buttonKeyCodes[1]) {
+                pressedButtonID = 1;
+            } else  if (keyCode==buttonKeyCodes[2]) {
+                pressedButtonID = 2;
+            } else  if (keyCode==buttonKeyCodes[3]) {
+                pressedButtonID = 3;
+            } else  if (keyCode==buttonKeyCodes[4]) {
+                pressedButtonID = 4;
+            }
+
+            if (pressedButtonID!=-1 && Game.sEvent == 0 && mPause!=1) {
+                mButtonPressed[pressedButtonID] = 1;
+                vibrate();
+                input = pressedButtonID + 1;
+                getCurrentGame().input();
+                return true;
+            }
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+
+        if (savedData.getBoolean(getString(R.string.prefKeyEnableKeyboardInput),false)) {
+            int releasedButtonID = -1;
+
+            if (keyCode==buttonKeyCodes[0]) {
+                releasedButtonID = 0;
+            } else  if (keyCode==buttonKeyCodes[1]) {
+                releasedButtonID = 1;
+            } else  if (keyCode==buttonKeyCodes[2]) {
+                releasedButtonID = 2;
+            } else  if (keyCode==buttonKeyCodes[3]) {
+                releasedButtonID = 3;
+            } else  if (keyCode==buttonKeyCodes[4]) {
+                releasedButtonID = 4;
+            }
+
+            if (releasedButtonID!=-1) {
+                mButtonPressed[releasedButtonID] = 0;
+                mButtonPressedCounter[releasedButtonID] = 0;
+
+                return true;
+            }
+        }
+
+        return super.onKeyUp(keyCode, event);
     }
 
     @Override
@@ -323,28 +407,40 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
     public void click1(View view) {
         switch (view.getId()) {
             case R.id.button_close:
-                moveTaskToBack(true);
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
+                buttonPressClose();
                 break;
             case R.id.button_pause:
-                if (mPause==0)                                                                      //just start the pause
-                    startPause();
-                else if (mPause==1) {                                                               //this means pause is running and should stop, so set to 2 so the handler doesnt call itself again
-                    mPause = 2;
-                    mText[4].setVisibility(View.INVISIBLE);
-                }
-                else if (mPause==2)                                                                 //this means the handler should stop, but the pause button was pressed again, so just set to 1 so it wont stop
-                    mPause=1;
+                buttonPressPause();
                 break;
             case R.id.button_reset:
-                mText[4].setVisibility(View.INVISIBLE);
-                mPause=0;
-                Game.reset();
+                buttonPressReset();
                 break;
         }
 
         vibrate();
+    }
+
+    private void buttonPressPause(){
+        if (mPause==0)                                                                      //just start the pause
+            startPause();
+        else if (mPause==1) {                                                               //this means pause is running and should stop, so set to 2 so the handler doesnt call itself again
+            mPause = 2;
+            mText[4].setVisibility(View.INVISIBLE);
+        }
+        else if (mPause==2)                                                                 //this means the handler should stop, but the pause button was pressed again, so just set to 1 so it wont stop
+            mPause=1;
+    }
+
+    private void buttonPressReset(){
+        mText[4].setVisibility(View.INVISIBLE);
+        mPause=0;
+        Game.reset();
+    }
+
+    private void buttonPressClose(){
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
     }
 
     public void updateUI() {
@@ -373,14 +469,6 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
         } else {
             createOldSoundPool();
         }
-    }
-
-    private void showOrHideStatusBar() {
-        if (savedData.getBoolean(getString(R.string.prefKeyHideStatusBar), false))
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        else
-            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     private void showToast(String text) {                                                     //simple function to show a new mToast text
@@ -489,5 +577,30 @@ public class Main extends AppCompatActivity implements Runnable, View.OnTouchLis
         }
     }
 
+    private void setUpDimensions(){
+        int marginTop;
+        int totalWidth = mLinearLayoutBackground.getWidth();
+        int totalHeight = mLinearLayoutBackground.getHeight();
+
+        width = (int)( (totalHeight * 0.6)/ (FIELD_HEIGHT));
+        params = new LinearLayout.LayoutParams(totalWidth, (FIELD_HEIGHT) * width + distanceHeight * 2);
+
+        if (savedData.getBoolean(getString(R.string.prefKeyEnableKeyboardInput),false)) {
+            marginTop = (totalHeight - params.height)/2;
+            linearLayoutButtons.setVisibility(View.GONE);
+        } else {
+            marginTop = width;
+            linearLayoutButtons.setVisibility(View.VISIBLE);
+        }
+
+        params.setMargins(0, marginTop, 0, 0);  //width is okay
+        l1.setLayoutParams(params);
+        linearLayoutMenuButtons.setLayoutParams(new LinearLayout.LayoutParams((totalWidth / 2 - ((FIELD_WIDTH * width) / 2)) - distanceWidth, LinearLayout.LayoutParams.MATCH_PARENT));
+        linearLayoutGameField.setLayoutParams(new LinearLayout.LayoutParams(FIELD_WIDTH * width + distanceWidth * 2, LinearLayout.LayoutParams.MATCH_PARENT));
+        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        params.setMargins(width, 0, 0, 0);
+        linearLayoutTexts.setLayoutParams(params);
+        linearLayoutGameExtra.setLayoutParams(new LinearLayout.LayoutParams(width * FIELD_WIDTH_2 + distanceWidth * 2, width * FIELD_HEIGHT_2 + distanceHeight * 2));
+    }
 }
 
