@@ -250,4 +250,16 @@ public abstract class Game {
         drawFading.reset();
         initialisation();
     }
+
+    protected boolean isInFieldBoundariesX(int value){
+        return value >= 0 && value < FIELD_WIDTH;
+    }
+
+    protected boolean isInFieldBoundariesY(int value){
+        return value >= 0 && value < FIELD_HEIGHT;
+    }
+
+    protected boolean isInFieldBoundariesXY(int value1, int value2){
+        return value1 >= 0 && value1 < FIELD_WIDTH && value2 >= 0 && value2 < FIELD_HEIGHT;
+    }
 }

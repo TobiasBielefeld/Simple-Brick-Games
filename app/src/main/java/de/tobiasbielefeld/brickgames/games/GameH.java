@@ -85,7 +85,8 @@ public class GameH extends Game {
         if (iShoot[1] < 1)
             sShoot = false;
 
-        if (fieldS[iShoot[0]][iShoot[1]] == 1) {
+
+        if (isInFieldBoundariesY(iShoot[1]) && fieldS[iShoot[0]][iShoot[1]] == 1) {
             playSound(5);
             fieldS[iShoot[0]][iShoot[1]] = 0;
             sShoot = false;
