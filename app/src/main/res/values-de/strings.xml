@@ -43,4 +43,21 @@
     <string name="ui_speed">Speed:</string>
     <string name="translations">Übersetzungen:</string>
     <string name="settings_change_language">Sprache ändern</string>
+    <string name="settingsEnabledKeyboardInputTitle">Erlaube Tastatur Eingabe</string>
+    <string name="settingsEnabledKeyboardInputText">Verstecke die Software Knöpfe und erlaube Eingabe über eine physische Tastatur</string>
+    <string name="settingsKeyboardInputMappingTitle">Tastenbelegung</string>
+    <string name="settingsKeyboardInputMappingText">Wähle andere Tasten für die Eingabe aus</string>
+
+    <string name="keyboardDialog_warning">Zurzeit ist es nicht möglich spezielle Tasten wie Enter, Leertaste oder Escape für die Eingabe auszuwählen,
+        da diese Tasten für die Navigation in der Android UI verwendet werden. Es kann leider auch nur eine Tate gleichzeitig gedrückt werden.
+        Ich versuche dieses Verhalten mit den nächsten Updates zu verbessern.</string>
+
+    <string name="keyboardDialog_title1">Aktionstasten</string>
+    <string name="keyboardDialog_title2">Menütasten</string>
+    <string name="keyboardDialogLeft">Links</string>
+    <string name="keyboardDialogRight">Rechts</string>
+    <string name="keyboardDialogUp">Oben</string>
+    <string name="keyboardDialogDown">Unten</string>
+    <string name="keyboardDialogAction">Aktion</string>
+
 </resources>
