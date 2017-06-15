@@ -22,6 +22,7 @@ import android.graphics.Point;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static de.tobiasbielefeld.brickgames.SharedData.*;
 
@@ -226,7 +227,10 @@ public abstract class Game {
             for (int j = 0; j < FIELD_HEIGHT_2; j++)
                 field2[i][j] = 0;
 
-        for (Point point : sObjects)
+        //to avoid ConcurrentModificationException, work with a copy
+        ArrayList<Point> copy = new ArrayList<>(sObjects);
+
+        for (Point point : copy)
             field[point.x][point.y]=1;
 
         getCurrentGame().drawField();

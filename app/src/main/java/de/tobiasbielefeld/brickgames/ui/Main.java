@@ -158,11 +158,10 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
             }
         });
 
-
         buttonKeyCodes[0] = savedData.getInt("buttonUp",KeyEvent.KEYCODE_W);
         buttonKeyCodes[1] = savedData.getInt("buttonDown",KeyEvent.KEYCODE_S);
         buttonKeyCodes[2] = savedData.getInt("buttonLeft",KeyEvent.KEYCODE_A);
-        buttonKeyCodes[3] = savedData.getInt("buttonRight",KeyEvent.KEYCODE_R);
+        buttonKeyCodes[3] = savedData.getInt("buttonRight",KeyEvent.KEYCODE_D);
         buttonKeyCodes[4] = savedData.getInt("buttonAction",KeyEvent.KEYCODE_L);
         buttonKeyCodes[5] = savedData.getInt("buttonClose",KeyEvent.KEYCODE_X);
         buttonKeyCodes[6] = savedData.getInt("buttonReset",KeyEvent.KEYCODE_R);

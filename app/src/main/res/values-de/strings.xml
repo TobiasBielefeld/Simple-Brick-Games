@@ -47,6 +47,7 @@
     <string name="settingsEnabledKeyboardInputText">Verstecke die Software Knöpfe und erlaube Eingabe über eine physische Tastatur</string>
     <string name="settingsKeyboardInputMappingTitle">Tastenbelegung</string>
     <string name="settingsKeyboardInputMappingText">Wähle andere Tasten für die Eingabe aus</string>
+    <string name="settingsInput">Eingabe</string>
 
     <string name="keyboardDialog_warning">Zurzeit ist es nicht möglich spezielle Tasten wie Enter, Leertaste oder Escape für die Eingabe auszuwählen,
         da diese Tasten für die Navigation in der Android UI verwendet werden. Es kann leider auch nur eine Tate gleichzeitig gedrückt werden.

@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 import android.view.ViewGroup;
@@ -68,6 +69,10 @@ public class Settings extends AppCompatPreferenceActivity
         backgroundDialog = findPreference(getString(R.string.prefKeyBackground));
         mButtonDialog = findPreference(getString(R.string.prefKeyButtons));
         mVibrationDialog = findPreference(getString(R.string.prefKeyVibrationStrength));
+
+        if (savedData==null){
+            savedData = PreferenceManager.getDefaultSharedPreferences(this);
+        }
 
         /* set default values for summary of custom preferences*/
         setPreferenceTextures();
