@@ -85,7 +85,7 @@
 
     <!--KeyboardDialog-->
     <string name="keyboardDialog_warning">Currently you cannot choose special keys like Enter, Space or Escape for input,
-        because they are used for navigation in the Android UI. Also you can only press one key at a time. I try to improve this with the next updates.</string>
+        because they are used for navigation in the Android UI.</string>
     <string name="keyboardDialog_title1">Action buttons</string>
     <string name="keyboardDialog_title2">Menu buttons</string>
     <string name="keyboardDialogLeft">Left</string>
