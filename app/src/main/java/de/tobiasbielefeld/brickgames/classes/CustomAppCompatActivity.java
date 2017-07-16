@@ -56,14 +56,14 @@ public class CustomAppCompatActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-       // setOrientation(this);
+        setOrientation(this);
         showOrHideStatusBar(this);
     }
 
     /*
      * Sets the screen orientation according to the settings. It is called from onResume().
      * @param activity The activity to apply the orientation on.
-
+    */
     public static void setOrientation(Activity activity) {
         switch (savedData.getString("pref_key_orientation", "1")) {
             case "1": //follow system settings
@@ -79,17 +79,19 @@ public class CustomAppCompatActivity extends AppCompatActivity {
                 activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
                 break;
         }
-    }*/
+    }
 
     /**
      * Hides the status bar according to the settings. It is called from onResume().
      * @param activity The activity to apply the changes on.
      */
     public void showOrHideStatusBar(Activity activity) {
-        if (savedData.getBoolean(getString(R.string.prefKeyHideStatusBar), false))
+        if (savedData.getBoolean("prefKeyHideStatusBar", true)) {
             activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        else
+        }
+        else {
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
     }
 }

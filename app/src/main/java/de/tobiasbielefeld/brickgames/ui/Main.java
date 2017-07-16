@@ -21,6 +21,7 @@ package de.tobiasbielefeld.brickgames.ui;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -36,6 +37,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -50,7 +52,6 @@ import de.tobiasbielefeld.brickgames.surfaceViews.GameView1;
 import de.tobiasbielefeld.brickgames.surfaceViews.GameView2;
 import de.tobiasbielefeld.brickgames.ui.about.AboutActivity;
 
-import static android.view.View.GONE;
 import static de.tobiasbielefeld.brickgames.SharedData.*;
 import static de.tobiasbielefeld.brickgames.classes.Game.*;
 
@@ -79,13 +80,13 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
     LinearLayout linearLayoutGameField;
     LinearLayout linearLayoutTexts ;
     LinearLayout linearLayoutGameExtra ;
-    LinearLayout linearLayoutButtons ;
+    LinearLayout layoutButtons1;
+    FrameLayout layoutButtons2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         createSoundPool();
 
         mLinearLayoutBackground = (LinearLayout) findViewById(R.id.linearLayoutBackground); //the whole display
@@ -94,7 +95,8 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
         linearLayoutGameField = (LinearLayout) findViewById(R.id.linearLayoutGameField);
         linearLayoutTexts = (LinearLayout) findViewById(R.id.linearLayoutTexts);
         linearLayoutGameExtra = (LinearLayout) findViewById(R.id.linearLayoutGameExtra);
-        linearLayoutButtons = (LinearLayout) findViewById(R.id.linearLayoutButtons);
+        layoutButtons1 = (LinearLayout) findViewById(R.id.layoutButtons1);
+        layoutButtons2 = (FrameLayout) findViewById(R.id.layoutButtons2);
         vibration = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -142,8 +144,6 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
             mButton[i].setOnTouchListener(this);
         }
 
-        //linearLayoutButtons.setOnTouchListener(this);
-
         setBackgroundColor();
         changeButtonColor();
 
@@ -154,7 +154,11 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
         mLinearLayoutBackground.post(new Runnable() {
             @Override
             public void run() {
-                setUpDimensions();
+                if (getResources().getConfiguration().orientation==Configuration.ORIENTATION_PORTRAIT) {
+                    setUpDimensions();
+                } else {
+                    setUpDimensionsLandscape();
+                }
             }
         });
 
@@ -221,8 +225,13 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
             if (data.getIntExtra(getString(R.string.prefKeyHideStatusBar), 0) > 0)
                 showOrHideStatusBar(this);
 
-            if (data.getIntExtra(getString(R.string.prefKeyEnableKeyboardInput),0) > 0)
-                setUpDimensions();
+            if (data.getIntExtra(getString(R.string.prefKeyEnableKeyboardInput),0) > 0) {
+                if (getResources().getConfiguration().orientation==Configuration.ORIENTATION_PORTRAIT) {
+                    setUpDimensions();
+                } else {
+                    setUpDimensionsLandscape();
+                }
+            }
         }
     }
 
@@ -576,6 +585,41 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
         }
     }
 
+    private void setUpDimensionsLandscape(){
+        int marginTop;
+        int totalWidth = mLinearLayoutBackground.getWidth();
+        int totalHeight = mLinearLayoutBackground.getHeight();
+
+        width = (int)( (totalWidth * 0.225)/ (FIELD_WIDTH));
+        params = new LinearLayout.LayoutParams((FIELD_WIDTH) * width ,totalHeight);
+
+        marginTop = (totalHeight - (FIELD_HEIGHT)* width - distanceWidth * 2)/2;
+
+        if (savedData.getBoolean(getString(R.string.prefKeyEnableKeyboardInput),false)) {
+
+            layoutButtons1.setVisibility(View.GONE);
+            layoutButtons2.setVisibility(View.GONE);
+        } else {
+
+            layoutButtons1.setVisibility(View.VISIBLE);
+            layoutButtons2.setVisibility(View.VISIBLE);
+        }
+
+        params = new LinearLayout.LayoutParams((FIELD_WIDTH) * width + distanceWidth * 2,(FIELD_HEIGHT)* width + distanceWidth * 2);
+        params.setMargins(0, marginTop, 0, 0);  //width is okay
+        linearLayoutGameField.setLayoutParams(params);
+
+        linearLayoutGameExtra.setLayoutParams(new LinearLayout.LayoutParams(width * FIELD_WIDTH_2 + distanceWidth * 2, width * FIELD_HEIGHT_2 + distanceHeight * 2));
+       //
+        //l1.setLayoutParams(params);
+        /*linearLayoutMenuButtons.setLayoutParams(new LinearLayout.LayoutParams((totalWidth / 2 - ((FIELD_WIDTH * width) / 2)) - distanceWidth, LinearLayout.LayoutParams.MATCH_PARENT));
+        linearLayoutGameField.setLayoutParams(new LinearLayout.LayoutParams(FIELD_WIDTH * width + distanceWidth * 2, LinearLayout.LayoutParams.MATCH_PARENT));
+        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        params.setMargins(width, 0, 0, 0);
+        linearLayoutTexts.setLayoutParams(params);
+        linearLayoutGameExtra.setLayoutParams(new LinearLayout.LayoutParams(width * FIELD_WIDTH_2 + distanceWidth * 2, width * FIELD_HEIGHT_2 + distanceHeight * 2));*/
+    }
+
     private void setUpDimensions(){
         int marginTop;
         int totalWidth = mLinearLayoutBackground.getWidth();
@@ -586,10 +630,12 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
 
         if (savedData.getBoolean(getString(R.string.prefKeyEnableKeyboardInput),false)) {
             marginTop = (totalHeight - params.height)/2;
-            linearLayoutButtons.setVisibility(View.GONE);
+            layoutButtons1.setVisibility(View.GONE);
+            layoutButtons2.setVisibility(View.GONE);
         } else {
             marginTop = width;
-            linearLayoutButtons.setVisibility(View.VISIBLE);
+            layoutButtons1.setVisibility(View.VISIBLE);
+            layoutButtons2.setVisibility(View.VISIBLE);
         }
 
         params.setMargins(0, marginTop, 0, 0);  //width is okay

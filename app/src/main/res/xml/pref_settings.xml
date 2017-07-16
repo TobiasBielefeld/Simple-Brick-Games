@@ -66,9 +66,20 @@
             android:summary="%s"
             android:title="@string/settings_change_language" />
 
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/pref_orientation_titles"
+            android:entryValues="@array/pref_orientation_values"
+            android:key="@string/pref_key_orientation"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@null"
+            android:summary="%s"
+            android:title="@string/settings_orientation" />
+
+
         <CheckBoxPreference
             android:key="@string/prefKeyHideStatusBar"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:title="@string/settingsStatusBar" />
 
         <CheckBoxPreference

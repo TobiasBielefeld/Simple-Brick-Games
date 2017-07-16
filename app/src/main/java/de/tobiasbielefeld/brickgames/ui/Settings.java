@@ -54,8 +54,7 @@ public class Settings extends AppCompatPreferenceActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //((ViewGroup) getListView().getParent()).setPadding(0, 0, 0, 0);                             //remove huge padding in landscape
+        ((ViewGroup) getListView().getParent()).setPadding(0, 0, 0, 0);                             //remove huge padding in landscape
         addPreferencesFromResource(R.xml.pref_settings);
         showOrHideStatusBar();
 
@@ -189,6 +188,9 @@ public class Settings extends AppCompatPreferenceActivity
             case "prefKeyEnableKeyboardInput":
                 getIntent().putExtra(getString(R.string.prefKeyEnableKeyboardInput), 1);
                 break;
+            case "pref_key_orientation":
+                setOrientation();
+                break;
         }
 
         setResult(RESULT_OK, getIntent());
@@ -206,5 +208,25 @@ public class Settings extends AppCompatPreferenceActivity
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         else
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    /**
+     * Applies the user setting of the screen orientation.
+     */
+    private void setOrientation() {
+        switch (savedData.getString("pref_key_orientation", "1")) {
+            case "1": //follow system settings
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+                break;
+            case "2": //portrait
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                break;
+            case "3": //landscape
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                break;
+            case "4": //landscape upside down
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
+                break;
+        }
     }
 }

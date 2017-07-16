@@ -28,6 +28,7 @@
 
     <!--Settings-->
     <string name="Settings">Settings</string>
+    <string name="settings_orientation">Screen orientation</string>
     <string name="settingsInput">Input</string>
     <string name="Settings_textures">Textures</string>
     <string name="Settings_backgroundcolour">Background colour</string>
@@ -53,10 +54,12 @@
     <string name="prefKeyEnableKeyboardInput" translatable="false">prefKeyEnableKeyboardInput</string>
     <string name="pref_key_language" translatable="false">pref_key_language</string>
     <string name="prefKeyKeyboardInputMapping" translatable="false">prefKeyKeyboardInput</string>
+    <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
     <string name="settingsEnabledKeyboardInputTitle">Enable keyboard input</string>
     <string name="settingsEnabledKeyboardInputText">Hide the software buttons and enable input via a physical keyboard</string>
     <string name="settingsKeyboardInputMappingTitle">Key assignment</string>
     <string name="settingsKeyboardInputMappingText">Select other keys for the input</string>
+
     <string name="settings_change_language">Change language</string>
 
     <!--About-->

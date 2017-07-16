@@ -11,4 +11,11 @@
         <item>de</item>
         <item>en</item>
     </string-array>
+
+    <string-array name="pref_orientation_titles">
+        <item>System Einstellungen folgen</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+        <item>Landscape umgekehrt</item>
+    </string-array>
 </resources>

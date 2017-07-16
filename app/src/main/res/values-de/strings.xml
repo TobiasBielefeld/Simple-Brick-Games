@@ -5,6 +5,7 @@
     <string name="Settings_textures">Texturen</string>
     <string name="changed_to">geändert zu</string>
     <string name="colour">Farbe</string>
+    <string name="settings_orientation">Bildschirmausrichtung</string>
     <string name="colour_blue">Blau</string>
     <string name="colour_gray">Grau</string>
     <string name="colour_green">Grün</string>
