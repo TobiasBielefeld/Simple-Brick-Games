@@ -260,10 +260,7 @@ public class GameN extends Game {
         for (int j = 0; j < BLOCK_DIMEN; j++) {                                                     //save current block on the field
             for (int i = 0; i < BLOCK_DIMEN; i++) {
                 if (mNowBlock[i][j] != 0 && (X+i) > 0 && (Y+j) >= 0 && (X+i) < DIMENSION_WIDTH && (Y+j) < DIMENSION_HEIGHT) {
-                    if (mTetrisField[X+i][Y+j] == 1)
-                        sEvent = 4;
-                    else
-                        mTetrisField[X+i][Y+j] = 1;
+                    mTetrisField[X+i][Y+j] = 1;
                 }
             }
         }

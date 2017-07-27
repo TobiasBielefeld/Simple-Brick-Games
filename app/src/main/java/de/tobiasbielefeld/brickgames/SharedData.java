@@ -69,7 +69,6 @@ public class SharedData {
 
     public static SharedPreferences savedData;
     public static Random rand = new Random();
-    public static DisplayMetrics metrics;
     public static LinearLayout.LayoutParams params;
     public static SharedPreferences.Editor edit;
     public static int[] soundList = new int[8];

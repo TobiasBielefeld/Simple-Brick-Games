@@ -279,6 +279,14 @@ public class Main extends CustomAppCompatActivity implements Runnable, View.OnTo
             }
 
             if (pressedButtonID!=-1 && Game.sEvent == 0 && mPause!=1) {
+
+                if (pressedButtonID<4) {
+                    for (int i=0;i<4;i++){
+                        mButtonPressed[i]=0;
+                        mButtonPressedCounter[i] = 0;
+                    }
+                }
+
                 mButtonPressed[pressedButtonID] = 1;
                 vibrate();
                 input = pressedButtonID + 1;
