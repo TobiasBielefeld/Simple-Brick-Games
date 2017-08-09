@@ -27,6 +27,13 @@ Navigation in main menu, press:
  * up to increase level
  * down to increase speed
  * action button to start game
+ 
+## Hall of shame
+This is the section where I list blatant copies of my work on the Google Play Store.
+
+- https://play.google.com/store/apps/details?id=com.al3abkom.brickgame
+- https://play.google.com/store/apps/details?id=com.andrew.studio.brickgames
+- https://play.google.com/store/apps/details?id=com.kodeguy.brickgame
 
 ## Usage
 If you want to use my work for your own project (which means in most cases: Put ads in it and publish on Google Play Store) YOU HAVE TO FOLLOW THE GPL LICENSE! This means, your project MUST be open source under a GPLv3+ compatible license and MUST contain attribution for the original work! I already found a lot of copies which simply removed my "About Game" screen and changed some graphics. If I see your work violating the GPL rules, I will let it get removed by Google. 
