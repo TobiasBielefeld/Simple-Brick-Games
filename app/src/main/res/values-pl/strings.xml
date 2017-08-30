@@ -1,1 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
+    <string name="app_version" translatable="false">Wersja</string>
+    <string name="cancel">Anuluj</string>
+    <string name="confirm">Potwierdź</string>
+    <string name="press_again">Naciśnij ponownie, aby wyjść</string>
+    <string name="translations">Tłumaczenia</string>
+
+    <!--UI-->
+    <string name="ui_close">Zamknij</string>
+    <string name="ui_reset">Reset</string>
+    <string name="ui_pause">Pauza</string>
+
+    <string name="ui_highscore">Rekord:</string>
+    <string name="ui_score">Punkty:</string>
+
+    <string name="ui_level">Poziom:</string>
+    <string name="ui_speed">Szybkość:</string>
+
+    <!--Colours-->
+    <string name="colour_blue">Niebieski</string>
+    <string name="colour_green">Zielony</string>
+    <string name="colour_red">Czerwony</string>
+    <string name="colour_yellow">Żółty</string>
+    <string name="colour_gray">Szary</string>
+
+    <!--Settings-->
+    <string name="Settings">Ustawienia</string>
+    <string name="settings_orientation">Orientacja ekranu</string>
+    <string name="settingsInput">Sterowanie</string>
+    <string name="Settings_textures">Tekstury</string>
+    <string name="Settings_backgroundcolour">Kolor tła</string>
+    <string name="Settings_button">Kolor przycisków</string>
+    <string name="colour">kolor</string>
+    <string name="Settings_sound">Włącz dźwięk w grze</string>
+    <string name="changed_to">zmieniono na</string>
+    <string name="number">Wartość</string>
+    <string name="is_now">wynosi teraz</string>
+    <string name="settingsStatusBar">Ukryj pasek powiadomień</string>
+    <string name="settingsBackPress">Potwierdź zamknięcie gry</string>
+    <string name="settingsBackPressDescription">Naciśnij ponownie przycisk cofania, aby wyjść z gry</string>
+    <string name="settingsCustomize">Dostosuj</string>
+    <string name="settingsOtherSettings">Inne ustawienia</string>
+    <string name="settingsVibrationStrength">Siła wibracji</string>
+    <string name="settingsEnabledKeyboardInputTitle">Sterowanie klawiszami</string>
+    <string name="settingsEnabledKeyboardInputText">Ukryj przyciski programowe i steruj fizycznymi klawiszami</string>
+    <string name="settingsKeyboardInputMappingTitle">Przypisanie klawiszy</string>
+    <string name="settingsKeyboardInputMappingText">Wybór innych klawiszy sterowania</string>
+
+    <string name="settings_change_language">Zmień język</string>
+
+    <!--About-->
+    <string name="About">O grze</string>
+    <string name="About_Text1">twórca: Tobias Bielefeld</string>
+    <string name="About_Text2">dziękuję za granie w moją grę :)</string>
+    <string name="About_Text3">Dźwięki stworzono za pomocą:</string>
+    <string name="and">i</string>
+    <string name="credits_to_roger_hicks_and_matt_white" translatable="false">autorstwa Rogera Hicksa i Matta White</string>
+    <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.pl"> na licencji CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> na licencji Apache Licence 2.0 </a></string>
+    <string name="off">Wył</string>
+
+    <string name="about_tab_1">Informacje</string>
+    <string name="about_tab_2">Lincencja</string>
+    <string name="about_tab_3">Zmiany</string>
+    <string name="about_build_date">Skompilowano</string>
+    <string name="about_programm_code_text">Kod źródłowy dostępny na:</string>
+
+    <!--KeyboardDialog-->
+    <string name="keyboardDialog_warning">Nie możesz sterować za pomocą klawiszy specjalnych takich jak enter, spacja, czy esc, ponieważ są one wykorzystywane do nawigacji po UI Androida.</string>
+    <string name="keyboardDialog_title1">Przyciski akcji</string>
+    <string name="keyboardDialog_title2">Przyciski menu</string>
+    <string name="keyboardDialogLeft">Lewo</string>
+    <string name="keyboardDialogRight">Prawo</string>
+    <string name="keyboardDialogUp">Góra</string>
+    <string name="keyboardDialogDown">Dół</string>
+    <string name="keyboardDialogAction">Akcja</string>
+
+
+</resources>
