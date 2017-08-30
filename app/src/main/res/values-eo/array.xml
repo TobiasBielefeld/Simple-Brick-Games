@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_language_titles">
+        <item>Sistema implicita</item>
+        <item>Angla</item>
+        <item>Germana</item>
+        <item>Esperanto</item>
+        <item>Pola</item>
+    </string-array>
+
+    <string-array name="pref_language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>de</item>
+        <item>eo</item>
+        <item>pl</item>
+    </string-array>
+
+    <string-array name="pref_orientation_titles">
+        <item>Laŭ sistema agordo</item>
+        <item>Vertikala</item>
+        <item>Horizontala</item>
+        <item>Horizontala inversa</item>
+    </string-array>
+</resources>

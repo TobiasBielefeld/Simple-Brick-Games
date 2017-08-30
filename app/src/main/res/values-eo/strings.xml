@@ -1,1 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
+    <string name="app_version" translatable="false">Versio</string>
+    <string name="cancel">Nuligi</string>
+    <string name="confirm">Konfirmi</string>
+    <string name="press_again">Premu denove por eliri</string>
+    <string name="translations">Tradukoj</string>
+
+    <!--UI-->
+    <string name="ui_close">Fermi</string>
+    <string name="ui_reset">Restartigi</string>
+    <string name="ui_pause">Paŭzigi</string>
+
+    <string name="ui_highscore">Rekordo:</string>
+    <string name="ui_score">Poentaro:</string>
+
+    <string name="ui_level">Nivelo:</string>
+    <string name="ui_speed">Rapido:</string>
+
+    <!--Colours-->
+    <string name="colour_blue">Blua</string>
+    <string name="colour_green">Verda</string>
+    <string name="colour_red">Ruĝa</string>
+    <string name="colour_yellow">Flava</string>
+    <string name="colour_gray">Griza</string>
+
+    <!--Settings-->
+    <string name="Settings">Agordoj</string>
+    <string name="settings_orientation">Ekrana orientiĝo</string>
+    <string name="settingsInput">Enigo</string>
+    <string name="Settings_textures">Bloketa stilo</string>
+    <string name="Settings_backgroundcolour">Fona koloro</string>
+    <string name="Settings_button">Butona koloro</string>
+    <string name="colour">koloro</string>
+    <string name="Settings_sound">Aktivigi sonojn en ludo</string>
+    <string name="changed_to">ŝanĝita al</string>
+    <string name="number">Valoro</string>
+    <string name="is_now">nun estas</string>
+    <string name="settingsStatusBar">Kaŝi sciigan breton</string>
+    <string name="settingsBackPress">Konfirmi fermado de ludo</string>
+    <string name="settingsBackPressDescription">Premu reen-butonon dufoje por fermi la ludon</string>
+    <string name="settingsCustomize">Alĝustigi</string>
+    <string name="settingsOtherSettings">Aliaj agordoj</string>
+    <string name="settingsVibrationStrength">Vibrada forteco</string>
+    <string name="settingsEnabledKeyboardInputTitle">Aktivigi perklavan enigon</string>
+    <string name="settingsEnabledKeyboardInputText">Kaŝi surekranajn butonojn kaj ebligi kontroli per fizika klavaro</string>
+    <string name="settingsKeyboardInputMappingTitle">Asigni klavojn</string>
+    <string name="settingsKeyboardInputMappingText">Elekti aliajn enigajn klavojn</string>
+
+    <string name="settings_change_language">Ŝanĝi lingvon</string>
+
+    <!--About-->
+    <string name="About">Pri la ludo</string>
+    <string name="About_Text1">programita de Tobias BIELEFELD</string>
+    <string name="About_Text2">dankon pro ludi mian ludon :)</string>
+    <string name="About_Text3">Sonoj komponitaj per:</string>
+    <string name="and">kaj</string>
+    <string name="credits_to_roger_hicks_and_matt_white" translatable="false">danke al Roger HICKS kaj Matt WHITE</string>
+    <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.eo"> laŭ la permesilo CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> laŭ la permesilo Apache Licence 2.0 </a></string>
+    <string name="off">For</string>
+
+    <string name="about_tab_1">Informoj</string>
+    <string name="about_tab_2">Permesilo</string>
+    <string name="about_tab_3">Ŝanĝoprotokolo</string>
+    <string name="about_build_date">Kompilita je</string>
+    <string name="about_programm_code_text">Fontkodo disponebla ĉe:</string>
+
+    <!--KeyboardDialog-->
+    <string name="keyboardDialog_warning">Vi ne povas asigni specialajn klavojn kiel enig-klavon, spacotrabon aŭ eskap-klavon por kontroli, ĉar ili estas uzataj por navigi en Androida uzant-fasado.</string>
+    <string name="keyboardDialog_title1">Ag-butonoj</string>
+    <string name="keyboardDialog_title2">Menu-butonoj</string>
+    <string name="keyboardDialogLeft">Maldekstre</string>
+    <string name="keyboardDialogRight">Dekstre</string>
+    <string name="keyboardDialogUp">Supre</string>
+    <string name="keyboardDialogDown">Malsupre</string>
+    <string name="keyboardDialogAction">Ago</string>
+
+</resources>
