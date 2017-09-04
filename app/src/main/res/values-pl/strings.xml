@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_version" translatable="false">Wersja</string>
+    <string name="app_version">Wersja</string>
     <string name="cancel">Anuluj</string>
     <string name="confirm">Potwierdź</string>
     <string name="press_again">Naciśnij ponownie, aby wyjść</string>
@@ -56,10 +56,12 @@
     <string name="About_Text2">dziękuję za granie w moją grę :)</string>
     <string name="About_Text3">Dźwięki stworzono za pomocą:</string>
     <string name="and">i</string>
-    <string name="credits_to_roger_hicks_and_matt_white" translatable="false">autorstwa Rogera Hicksa i Matta White</string>
-    <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.pl"> na licencji CC-BY-3.0 </a></string>
-    <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> na licencji Apache Licence 2.0 </a></string>
+    <string name="credits_to_roger_hicks_and_matt_white">autorstwa Rogera Hicksa i Matta White</string>
+    <string name="under_cc_by_3_0_license"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.pl"> na licencji CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> na licencji Apache Licence 2.0 </a></string>
     <string name="off">Wył</string>
+    <string name="about_translations">Tłumaczenia</string>
+    <string name="about_translations_esperanto_polish">Esperanto i Polski: użytkownik GitHuba verdulo</string>
 
     <string name="about_tab_1">Informacje</string>
     <string name="about_tab_2">Lincencja</string>

@@ -27,7 +27,11 @@ Navigation in main menu, press:
  * up to increase level
  * down to increase speed
  * action button to start game
- 
+
+## Translations
+Thanks to the following persons for providing translations :D
+- Esperanto and Polish: verdulo
+
 ## Hall of shame
 This is the section where I list blatant copies of my work on the Google Play Store.
 

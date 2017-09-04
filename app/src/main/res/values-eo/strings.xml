@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_version" translatable="false">Versio</string>
+    <string name="app_version">Versio</string>
     <string name="cancel">Nuligi</string>
     <string name="confirm">Konfirmi</string>
     <string name="press_again">Premu denove por eliri</string>
@@ -56,9 +56,9 @@
     <string name="About_Text2">dankon pro ludi mian ludon :)</string>
     <string name="About_Text3">Sonoj komponitaj per:</string>
     <string name="and">kaj</string>
-    <string name="credits_to_roger_hicks_and_matt_white" translatable="false">danke al Roger HICKS kaj Matt WHITE</string>
-    <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.eo"> laŭ la permesilo CC-BY-3.0 </a></string>
-    <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> laŭ la permesilo Apache Licence 2.0 </a></string>
+    <string name="credits_to_roger_hicks_and_matt_white">danke al Roger HICKS kaj Matt WHITE</string>
+    <string name="under_cc_by_3_0_license"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.eo"> laŭ la permesilo CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> laŭ la permesilo Apache Licence 2.0 </a></string>
     <string name="off">For</string>
 
     <string name="about_tab_1">Informoj</string>
@@ -66,6 +66,8 @@
     <string name="about_tab_3">Ŝanĝoprotokolo</string>
     <string name="about_build_date">Kompilita je</string>
     <string name="about_programm_code_text">Fontkodo disponebla ĉe:</string>
+    <string name="about_translations">Tradukoj</string>
+    <string name="about_translations_esperanto_polish">Esperanto kaj Pola: de GitHub-uzanto verdulo</string>
 
     <!--KeyboardDialog-->
     <string name="keyboardDialog_warning">Vi ne povas asigni specialajn klavojn kiel enig-klavon, spacotrabon aŭ eskap-klavon por kontroli, ĉar ili estas uzataj por navigi en Androida uzant-fasado.</string>

@@ -74,10 +74,31 @@
         android:gravity="center" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="@string/about_translations"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="@string/about_translations_esperanto_polish"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:focusable="false"
         android:gravity="center"
         android:text="@string/about_programm_code_text"

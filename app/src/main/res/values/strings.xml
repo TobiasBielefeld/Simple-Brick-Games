@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name" translatable="false">Simple Brick Games</string>
-    <string name="app_version" translatable="false">Version</string>
+    <string name="app_version">Version</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
     <string name="press_again">Press again to exit</string>
@@ -72,10 +72,10 @@
 
     <string name="pulseboy" translatable="false">PulseBoy</string>
     <string name="and">and</string>
-    <string name="credits_to_roger_hicks_and_matt_white" translatable="false">credits to: Roger Hicks and Matt White</string>
+    <string name="credits_to_roger_hicks_and_matt_white">credits to: Roger Hicks and Matt White</string>
     <string name="bfxr" translatable="false">BFXR</string>
-    <string name="under_cc_by_3_0_license" translatable="false"><a href="https://creativecommons.org/licenses/by/3.0/us/"> under CC-BY-3.0 license </a></string>
-    <string name="under_apache_licence_2_0" translatable="false"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> under Apache Licence 2.0 </a></string>
+    <string name="under_cc_by_3_0_license"><a href="https://creativecommons.org/licenses/by/3.0/us/"> under CC-BY-3.0 license </a></string>
+    <string name="under_apache_licence_2_0"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> under Apache Licence 2.0 </a></string>
     <string name="off">Off</string>
 
     <string name="about_tab_1">Information</string>
@@ -84,6 +84,9 @@
     <string name="about_build_date">Build date</string>
     <string name="about_programm_code_text">Source code available on:</string>
     <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Brick-Games">GitHub</a></string>
+
+    <string name="about_translations">Translations</string>
+    <string name="about_translations_esperanto_polish">Esperanto and Polish: By GitHub User verdulo</string>
 
 
     <!--KeyboardDialog-->
