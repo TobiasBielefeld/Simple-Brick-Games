@@ -14,7 +14,7 @@ I already made some improvements, but I don't want to put too much time in that.
 I tried to make it easy to add more subgames in this app.
 
 # Description
-This game immitates the good old low cost handhelds
+This game imitates the good old low cost handhelds
 
 * 14 different mini games
 * customizable background, buttons and textures
