@@ -9,7 +9,7 @@
 
     <!--UI-->
     <string name="ui_close">Fermer</string>
-    <string name="ui_reset">Redémarrer</string>
+    <string name="ui_reset">Réinitialiser</string>
     <string name="ui_pause">Pause</string>
 
     <string name="ui_highscore">Meilleur score :</string>
@@ -39,44 +39,44 @@
     <string name="is_now">est maintenant</string>
     <string name="settingsStatusBar">Cacher la barre de notification</string>
     <string name="settingsBackPress">Confirmer la fermeture du jeu</string>
-    <string name="settingsBackPressDescription">Appuyer deux fois sur arrière pour fermer le jeu</string>
-    <string name="settingsCustomize"></string>
-    <string name="settingsOtherSettings"></string>
-    <string name="settingsVibrationStrength"></string>
-    <string name="settingsEnabledKeyboardInputTitle"></string>
-    <string name="settingsEnabledKeyboardInputText"></string>
-    <string name="settingsKeyboardInputMappingTitle"></string>
-    <string name="settingsKeyboardInputMappingText"></string>
+    <string name="settingsBackPressDescription">Appuyer deux fois sur retour pour fermer le jeu</string>
+    <string name="settingsCustomize">Personnaliser</string>
+    <string name="settingsOtherSettings">Autres paramètres</string>
+    <string name="settingsVibrationStrength">Force des vibrations</string>
+    <string name="settingsEnabledKeyboardInputTitle">Activer la saisie au clavier</string>
+    <string name="settingsEnabledKeyboardInputText">Cache les boutons logiciels et active la saisie via un clavier physique</string>
+    <string name="settingsKeyboardInputMappingTitle">Attribution des touches</string>
+    <string name="settingsKeyboardInputMappingText">Selectionner d'autres touches pour la saisie</string>
 
-    <string name="settings_change_language"></string>
+    <string name="settings_change_language">Changer la langue</string>
 
     <!--About-->
-    <string name="About"></string>
-    <string name="About_Text1"></string>
-    <string name="About_Text2"></string>
-    <string name="About_Text3"></string>
-    <string name="and"></string>
-    <string name="credits_to_roger_hicks_and_matt_white"></string>
-    <string name="under_cc_by_3_0_license"></string>
-    <string name="under_apache_licence_2_0"></string>
-    <string name="off"></string>
+    <string name="About">À propos du jeu</string>
+    <string name="About_Text1">développé par Tobias Bielefeld</string>
+    <string name="About_Text2">merci de jouer à mon jeu :)</string>
+    <string name="About_Text3">Sons créés avec :</string>
+    <string name="and">et</string>
+    <string name="credits_to_roger_hicks_and_matt_white">crédits à :</string>
+    <string name="under_cc_by_3_0_license"><a href="https://creativecommons.org/licenses/by/3.0/us/"> sous licence CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> sous licence Apache 2.0 </a></string>
+    <string name="off">éteint</string>
 
-    <string name="about_tab_1"></string>
-    <string name="about_tab_2"></string>
-    <string name="about_tab_3"></string>
-    <string name="about_build_date"></string>
-    <string name="about_programm_code_text"></string>
-    <string name="about_translations"></string>
-    <string name="about_translations_esperanto_polish"></string>
+    <string name="about_tab_1">Information</string>
+    <string name="about_tab_2">Licence</string>
+    <string name="about_tab_3">Changelog</string>
+    <string name="about_build_date">Date de compilation</string>
+    <string name="about_programm_code_text">Code source disponible sur :</string>
+    <string name="about_translations">Traductions</string>
+    <string name="about_translations_esperanto_polish">Espéranto et polonais : Par verdulo sur GitHub</string>
 
     <!--KeyboardDialog-->
-    <string name="keyboardDialog_warning"></string>
-    <string name="keyboardDialog_title1"></string>
-    <string name="keyboardDialog_title2"></string>
-    <string name="keyboardDialogLeft"></string>
-    <string name="keyboardDialogRight"></string>
-    <string name="keyboardDialogUp"></string>
-    <string name="keyboardDialogDown"></string>
-    <string name="keyboardDialogAction"></string>
+    <string name="keyboardDialog_warning">Actuellement vous ne pouvez pas choisir des touches spéciales comme Entrée, Espace ou Échap pour la saisie car elles sont utilisées pour la navigation dans l'interface d'Android.</string>
+    <string name="keyboardDialog_title1">Boutons d'action</string>
+    <string name="keyboardDialog_title2">Boutons de menu</string>
+    <string name="keyboardDialogLeft">Gauche</string>
+    <string name="keyboardDialogRight">Droite</string>
+    <string name="keyboardDialogUp">Haut</string>
+    <string name="keyboardDialogDown">Bas</string>
+    <string name="keyboardDialogAction">Action</string>
 
 </resources>
