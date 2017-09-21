@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_version">Version</string>
+    <string name="cancel">Annuler</string>
+    <string name="confirm">Confirmer</string>
+    <string name="press_again">Appuyer à nouveau pour quitter</string>
+    <string name="translations">Traductions</string>
+
+    <!--UI-->
+    <string name="ui_close">Fermer</string>
+    <string name="ui_reset">Redémarrer</string>
+    <string name="ui_pause">Pause</string>
+
+    <string name="ui_highscore">Meilleur score :</string>
+    <string name="ui_score">Score :</string>
+
+    <string name="ui_level">Niveau :</string>
+    <string name="ui_speed">Vitesse :</string>
+
+    <!--Colours-->
+    <string name="colour_blue">Bleu</string>
+    <string name="colour_green">Vert</string>
+    <string name="colour_red">Rouge</string>
+    <string name="colour_yellow">Jaune</string>
+    <string name="colour_gray">Gris</string>
+
+    <!--Settings-->
+    <string name="Settings">Paramètres</string>
+    <string name="settings_orientation">Orientation de l'écran</string>
+    <string name="settingsInput">Saisie</string>
+    <string name="Settings_textures">Textures</string>
+    <string name="Settings_backgroundcolour">Couleur de fond</string>
+    <string name="Settings_button">Couleur des boutons</string>
+    <string name="colour">couleur</string>
+    <string name="Settings_sound">Activer le son en jeu</string>
+    <string name="changed_to">changer pour</string>
+    <string name="number">nombre</string>
+    <string name="is_now">est maintenant</string>
+    <string name="settingsStatusBar">Cacher la barre de notification</string>
+    <string name="settingsBackPress">Confirmer la fermeture du jeu</string>
+    <string name="settingsBackPressDescription">Appuyer deux fois sur arrière pour fermer le jeu</string>
+    <string name="settingsCustomize"></string>
+    <string name="settingsOtherSettings"></string>
+    <string name="settingsVibrationStrength"></string>
+    <string name="settingsEnabledKeyboardInputTitle"></string>
+    <string name="settingsEnabledKeyboardInputText"></string>
+    <string name="settingsKeyboardInputMappingTitle"></string>
+    <string name="settingsKeyboardInputMappingText"></string>
+
+    <string name="settings_change_language"></string>
+
+    <!--About-->
+    <string name="About"></string>
+    <string name="About_Text1"></string>
+    <string name="About_Text2"></string>
+    <string name="About_Text3"></string>
+    <string name="and"></string>
+    <string name="credits_to_roger_hicks_and_matt_white"></string>
+    <string name="under_cc_by_3_0_license"></string>
+    <string name="under_apache_licence_2_0"></string>
+    <string name="off"></string>
+
+    <string name="about_tab_1"></string>
+    <string name="about_tab_2"></string>
+    <string name="about_tab_3"></string>
+    <string name="about_build_date"></string>
+    <string name="about_programm_code_text"></string>
+    <string name="about_translations"></string>
+    <string name="about_translations_esperanto_polish"></string>
+
+    <!--KeyboardDialog-->
+    <string name="keyboardDialog_warning"></string>
+    <string name="keyboardDialog_title1"></string>
+    <string name="keyboardDialog_title2"></string>
+    <string name="keyboardDialogLeft"></string>
+    <string name="keyboardDialogRight"></string>
+    <string name="keyboardDialogUp"></string>
+    <string name="keyboardDialogDown"></string>
+    <string name="keyboardDialogAction"></string>
+
+</resources>
