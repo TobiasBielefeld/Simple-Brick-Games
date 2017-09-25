@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_version">Versão</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="press_again">Pressione novamente para sair</string>
+    <string name="translations">Traduções</string>
+
+    <!--UI-->
+    <string name="ui_close">Fechar</string>
+    <string name="ui_reset">Resetar</string>
+    <string name="ui_pause">Pausar</string>
+
+    <string name="ui_highscore">Maior pontuação:</string>
+    <string name="ui_score">Pontuação:</string>
+
+    <string name="ui_level">Nível:</string>
+    <string name="ui_speed">Velocidade:</string>
+
+    <!--Colours-->
+    <string name="colour_blue">Azul</string>
+    <string name="colour_green">Verde</string>
+    <string name="colour_red">Vermelho</string>
+    <string name="colour_yellow">Amarelo</string>
+    <string name="colour_gray">Cinza</string>
+
+    <!--Settings-->
+    <string name="Settings">Configurações</string>
+    <string name="settings_orientation">Orientação da tela</string>
+    <string name="settingsInput">Entrada</string>
+    <string name="Settings_textures">Texturas</string>
+    <string name="Settings_backgroundcolour">Cor do plano de fundo</string>
+    <string name="Settings_button">Cor do botão</string>
+    <string name="colour">cor</string>
+    <string name="Settings_sound">Ativar som em jogo</string>
+    <string name="changed_to">alterado para</string>
+    <string name="number">Número</string>
+    <string name="is_now">é agora</string>
+    <string name="settingsStatusBar">Ocultar barra de notificação</string>
+    <string name="settingsBackPress">Confirmar fechamento do jogo</string>
+    <string name="settingsBackPressDescription">Pressione o botão voltar duas vezes para fechar o jogo</string>
+    <string name="settingsCustomize">Customizar</string>
+    <string name="settingsOtherSettings">Outras configurações</string>
+    <string name="settingsVibrationStrength">Força da vibração</string>
+    <string name="settingsEnabledKeyboardInputTitle">Ativar entrada por teclado</string>
+    <string name="settingsEnabledKeyboardInputText">Ocultar os botões virtuais e ativar entrada pelo teclado físico</string>
+    <string name="settingsKeyboardInputMappingTitle">Mapear teclas</string>
+    <string name="settingsKeyboardInputMappingText">Selecionar outras teclas para entrada</string>
+
+    <string name="settings_change_language">Mudar idioma</string>
+
+    <!--About-->
+    <string name="About">Sobre o jogo</string>
+    <string name="About_Text1">desenvolvido por Tobias Bielefeld</string>
+    <string name="About_Text2">Obrigado por jogar meu jogo :)</string>
+    <string name="About_Text3">Sons criados com:</string>
+
+    <string name="and">e</string>
+    <string name="credits_to_roger_hicks_and_matt_white">créditos para Roger Hicks e Matt White</string>
+    <string name="under_cc_by_3_0_license"><a href=\"https://creativecommons.org/licenses/by/3.0/us/\" > sobre licença CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0"><a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\" > sobre licença Apache 2.0 </a></string>
+    <string name="off">Desligar</string>
+
+    <string name="about_tab_1">Informação</string>
+    <string name="about_tab_2">Licença</string>
+    <string name="about_tab_3">Registro de alterações</string>
+    <string name="about_build_date">Data de compilação</string>
+    <string name="about_programm_code_text">Código fonte disponível em:</string>
+
+    <string name="about_translations">Traduções</string>
+    <string name="about_translations_esperanto_polish">Esperanto e Polonês: pelo usuário no GitHub verdulo</string>
+    <string name="about_translations_french">Francês: pelo usuário no GitHub  xinxinxinxinxin</string>
+
+
+    <!--KeyboardDialog-->
+    <string name="keyboardDialog_warning">Atualmente você não pode escolher teclas especiais como Enter, Espaço ou Esc, para entrada, porque elas são usadas para navegação na interface de usuário Android.</string>
+    <string name="keyboardDialog_title1">Botões de ação</string>
+    <string name="keyboardDialog_title2">Botões de menu</string>
+    <string name="keyboardDialogLeft">Esquerda</string>
+    <string name="keyboardDialogRight">Direita</string>
+    <string name="keyboardDialogUp">Para cima</string>
+    <string name="keyboardDialogDown">Para baixo</string>
+    <string name="keyboardDialogAction">Ação</string>
+
+
+</resources>
