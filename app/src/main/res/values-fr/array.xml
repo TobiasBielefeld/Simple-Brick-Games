@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_language_titles">
+        <item>Langue par défaut</item>
+        <item>Anglais</item>
+        <item>Espéranto</item>
+        <item>Allemand</item>
+        <item>Français</item>
+        <item>Polonais</item>
+    </string-array>
+
+    <string-array name="pref_language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>eo</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>pl</item>
+    </string-array>
+
+    <string-array name="pref_orientation_titles">
+        <item>Suivre les paramètres du système</item>
+        <item>Portrait</item>
+        <item>Paysage</item>
+        <item>Paysage inversé</item>
+    </string-array>
+</resources>
