@@ -52,6 +52,7 @@
     <string name="settingsInput">Eingabe</string>
     <string name="about_translations">Übersetzungen</string>
     <string name="about_translations_esperanto_polish">Esperanto und Polnisch: Von GitHub Nutzer verdulo</string>
+    <string name="about_translations_french">Französisch: Von GitHub Nutzer xinxinxinxinxin</string>
 
     <string name="keyboardDialog_warning">Zurzeit ist es nicht möglich spezielle Tasten wie Enter, Leertaste oder Escape für die Eingabe auszuwählen,
         da diese Tasten für die Navigation in der Android UI verwendet werden.</string>

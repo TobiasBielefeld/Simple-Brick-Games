@@ -68,6 +68,8 @@
     <string name="about_programm_code_text">Fontkodo disponebla ĉe:</string>
     <string name="about_translations">Tradukoj</string>
     <string name="about_translations_esperanto_polish">Esperanto kaj Pola: de GitHub-uzanto verdulo</string>
+    <string name="about_translations_french">Franca: de GitHub-uzantoj xinxinxinxinxin</string>
+
 
     <!--KeyboardDialog-->
     <string name="keyboardDialog_warning">Vi ne povas asigni specialajn klavojn kiel enig-klavon, spacotrabon aŭ eskap-klavon por kontroli, ĉar ili estas uzataj por navigi en Androida uzant-fasado.</string>

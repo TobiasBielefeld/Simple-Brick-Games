@@ -5,6 +5,7 @@
         <item>Deutsch</item>
         <item>Englisch</item>
         <item>Esperanto</item>
+        <item>Französisch</item>
         <item>Polnisch</item>
     </string-array>
 
@@ -13,6 +14,7 @@
         <item>de</item>
         <item>en</item>
         <item>eo</item>
+        <item>fr</item>
         <item>pl</item>
     </string-array>
 

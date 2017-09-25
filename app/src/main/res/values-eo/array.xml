@@ -4,6 +4,7 @@
         <item>Sistema implicita</item>
         <item>Angla</item>
         <item>Esperanto</item>
+        <item>Franca</item>
         <item>Germana</item>
         <item>Pola</item>
     </string-array>
@@ -12,6 +13,7 @@
         <item>default</item>
         <item>en</item>
         <item>eo</item>
+        <item>fr</item>
         <item>de</item>
         <item>pl</item>
     </string-array>

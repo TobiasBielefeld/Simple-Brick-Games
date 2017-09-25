@@ -4,8 +4,8 @@
         <item>Domyślny</item>
         <item>Angielski</item>
         <item>Esperanto</item>
+        <item>Francuski</item>
         <item>Niemiecki</item>
-
         <item>Polski</item>
     </string-array>
 
@@ -13,6 +13,7 @@
         <item>default</item>
         <item>en</item>
         <item>eo</item>
+        <item>fr</item>
         <item>de</item>
         <item>pl</item>
     </string-array>

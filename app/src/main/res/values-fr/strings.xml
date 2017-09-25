@@ -27,7 +27,7 @@
 
     <!--Settings-->
     <string name="Settings">Paramètres</string>
-    <string name="settings_orientation">Orientation de l'écran</string>
+    <string name="settings_orientation">Orientation de l\'écran</string>
     <string name="settingsInput">Saisie</string>
     <string name="Settings_textures">Textures</string>
     <string name="Settings_backgroundcolour">Couleur de fond</string>
@@ -46,7 +46,7 @@
     <string name="settingsEnabledKeyboardInputTitle">Activer la saisie au clavier</string>
     <string name="settingsEnabledKeyboardInputText">Cache les boutons logiciels et active la saisie via un clavier physique</string>
     <string name="settingsKeyboardInputMappingTitle">Attribution des touches</string>
-    <string name="settingsKeyboardInputMappingText">Selectionner d'autres touches pour la saisie</string>
+    <string name="settingsKeyboardInputMappingText">Selectionner d\'autres touches pour la saisie</string>
 
     <string name="settings_change_language">Changer la langue</string>
 
@@ -68,10 +68,11 @@
     <string name="about_programm_code_text">Code source disponible sur :</string>
     <string name="about_translations">Traductions</string>
     <string name="about_translations_esperanto_polish">Espéranto et polonais : Par verdulo sur GitHub</string>
+    <string name="about_translations_french">Français : Par xinxinxinxinxin sur GitHub</string>
 
     <!--KeyboardDialog-->
-    <string name="keyboardDialog_warning">Actuellement vous ne pouvez pas choisir des touches spéciales comme Entrée, Espace ou Échap pour la saisie car elles sont utilisées pour la navigation dans l'interface d'Android.</string>
-    <string name="keyboardDialog_title1">Boutons d'action</string>
+    <string name="keyboardDialog_warning">Actuellement vous ne pouvez pas choisir des touches spéciales comme Entrée, Espace ou Échap pour la saisie car elles sont utilisées pour la navigation dans l\'interface d\'Android.</string>
+    <string name="keyboardDialog_title1">Boutons d\'action</string>
     <string name="keyboardDialog_title2">Boutons de menu</string>
     <string name="keyboardDialogLeft">Gauche</string>
     <string name="keyboardDialogRight">Droite</string>
