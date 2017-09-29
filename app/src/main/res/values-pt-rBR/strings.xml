@@ -58,8 +58,8 @@
 
     <string name="and">e</string>
     <string name="credits_to_roger_hicks_and_matt_white">créditos para Roger Hicks e Matt White</string>
-    <string name="under_cc_by_3_0_license"><a href=\"https://creativecommons.org/licenses/by/3.0/us/\" > sobre licença CC-BY-3.0 </a></string>
-    <string name="under_apache_licence_2_0"><a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\" > sobre licença Apache 2.0 </a></string>
+    <string name="under_cc_by_3_0_license"><a href="https://creativecommons.org/licenses/by/3.0/us/deed.pl"> sobre licença CC-BY-3.0 </a></string>
+    <string name="under_apache_licence_2_0"><a href="http://www.apache.org/licenses/LICENSE-2.0.html"> sobre licença Apache 2.0 </a></string>
     <string name="off">Desligar</string>
 
     <string name="about_tab_1">Informação</string>
@@ -70,7 +70,8 @@
 
     <string name="about_translations">Traduções</string>
     <string name="about_translations_esperanto_polish">Esperanto e Polonês: pelo usuário no GitHub verdulo</string>
-    <string name="about_translations_french">Francês: pelo usuário no GitHub  xinxinxinxinxin</string>
+    <string name="about_translations_french">Francês: pelo usuário no GitHub xinxinxinxinxin</string>
+    <string name="about_translations_portuguese">Português: pelo usuário no GitHub jeisoncp</string>
 
 
     <!--KeyboardDialog-->

@@ -7,6 +7,7 @@
         <item>Espéranto</item>
         <item>Français</item>
         <item>Polonais</item>
+        <item>Portugais</item>
     </string-array>
 
     <string-array name="pref_language_values">
@@ -16,6 +17,7 @@
         <item>eo</item>
         <item>fr</item>
         <item>pl</item>
+        <item>pt</item>
     </string-array>
 
     <string-array name="pref_orientation_titles">

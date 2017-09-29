@@ -13,8 +13,8 @@ android {
         applicationId "de.tobiasbielefeld.brickgames"
         minSdkVersion 9
         targetSdkVersion 24
-        versionCode 17
-        versionName '2.2.3'
+        versionCode 18
+        versionName '2.2.4'
     }
     buildTypes {
         release {

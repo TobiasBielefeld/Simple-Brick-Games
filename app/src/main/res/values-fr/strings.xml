@@ -69,6 +69,7 @@
     <string name="about_translations">Traductions</string>
     <string name="about_translations_esperanto_polish">Espéranto et polonais : Par verdulo sur GitHub</string>
     <string name="about_translations_french">Français : Par xinxinxinxinxin sur GitHub</string>
+    <string name="about_translations_portuguese">Portugais: Par jeisoncp sur GitHub</string>
 
     <!--KeyboardDialog-->
     <string name="keyboardDialog_warning">Actuellement vous ne pouvez pas choisir des touches spéciales comme Entrée, Espace ou Échap pour la saisie car elles sont utilisées pour la navigation dans l\'interface d\'Android.</string>
