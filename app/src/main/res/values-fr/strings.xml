@@ -35,7 +35,7 @@
     <string name="colour">couleur</string>
     <string name="Settings_sound">Activer le son en jeu</string>
     <string name="changed_to">changer pour</string>
-    <string name="number">nombre</string>
+    <string name="number">numéro</string>
     <string name="is_now">est maintenant</string>
     <string name="settingsStatusBar">Cacher la barre de notification</string>
     <string name="settingsBackPress">Confirmer la fermeture du jeu</string>
